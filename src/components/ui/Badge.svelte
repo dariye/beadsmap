@@ -9,7 +9,7 @@
 </script>
 
 <span
-  class="inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium"
+  class="badge"
   class:badge-default={variant === 'default'}
   class:badge-done={variant === 'done'}
   class:badge-progress={variant === 'progress'}
@@ -21,6 +21,16 @@
 </span>
 
 <style>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 1.4;
+  }
   .badge-default { background: var(--color-surface-2); color: var(--color-text); }
   .badge-done { background: color-mix(in srgb, var(--color-done) 18%, transparent); color: var(--color-done); }
   .badge-progress { background: color-mix(in srgb, var(--color-accent) 18%, transparent); color: var(--color-accent); }
