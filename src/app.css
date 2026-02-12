@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* ── Light theme (default) ── */
+:root {
+  --color-bg: #fafaf9;
+  --color-surface: #f5f5f4;
+  --color-surface-2: #e7e5e4;
+  --color-border: #d6d3d1;
+  --color-border-subtle: #e7e5e4;
+  --color-text: #1c1917;
+  --color-text-muted: #57534e;
+  --color-text-faint: #a8a29e;
+  --color-accent: #2563eb;
+  --color-done: #16a34a;
+  --color-progress: #2563eb;
+  --color-open: #a8a29e;
+  --color-blocked: #d97706;
+  --color-risk: #dc2626;
+  --color-bar-text: #ffffff;
+  --color-overlay: rgba(250, 250, 249, 0.88);
+  --color-shadow: rgba(0, 0, 0, 0.06);
+  --color-grid: #e7e5e4;
+  --color-grid-strong: #d6d3d1;
+}
+
+/* ── Dark theme ── */
+.dark {
+  --color-bg: #0a0a0b;
+  --color-surface: #141416;
+  --color-surface-2: #1e1e21;
+  --color-border: #2e2e33;
+  --color-border-subtle: #1e1e21;
+  --color-text: #f0f0f2;
+  --color-text-muted: #8b8b96;
+  --color-text-faint: #55555e;
+  --color-accent: #3b82f6;
+  --color-done: #22c55e;
+  --color-progress: #3b82f6;
+  --color-open: #52525b;
+  --color-blocked: #f59e0b;
+  --color-risk: #ef4444;
+  --color-bar-text: #ffffff;
+  --color-overlay: rgba(10, 10, 11, 0.88);
+  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-grid: #1a1a1e;
+  --color-grid-strong: #2a2a2f;
+}
+
+/* ── System preference auto-detection ── */
+@media (prefers-color-scheme: dark) {
+  .system {
+    --color-bg: #0a0a0b;
+    --color-surface: #141416;
+    --color-surface-2: #1e1e21;
+    --color-border: #2e2e33;
+    --color-border-subtle: #1e1e21;
+    --color-text: #f0f0f2;
+    --color-text-muted: #8b8b96;
+    --color-text-faint: #55555e;
+    --color-accent: #3b82f6;
+    --color-done: #22c55e;
+    --color-progress: #3b82f6;
+    --color-open: #52525b;
+    --color-blocked: #f59e0b;
+    --color-risk: #ef4444;
+    --color-bar-text: #ffffff;
+    --color-overlay: rgba(10, 10, 11, 0.88);
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-grid: #1a1a1e;
+    --color-grid-strong: #2a2a2f;
+  }
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#app {
+  min-height: 100vh;
+}
